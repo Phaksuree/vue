@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  
+<style id="jsbin-css">
+[v-cloak]{
+  display:none;
+}
+</style>
+</head>
+<body>
+
+ <div id="app">
+  <input type="password" placeholder="Enter your name" v-model='password'>
+  
+  <p v-if='password.length > 8'>Awesome! your password is longer than 8 characters.</p>
+  <p v-else-if='password.length >0'>Please enter a longer password.</p>
+  <p v-else>Please enter a password.</p>
+  
+  <ol>
+    <li v-for="(value,propertyName) in categories">{{value.name}}
+      <ul>
+        <li v-for="i in 3">{{value.sub[i-1]}}</li>
+      </ul>
+    </li>
+  </ol>
+ </div>
+  
+  
+<script id="jsbin-javascript">
+new Vue({
+  el: '#app',
+  data: {
+    password: '',
+    categories: [
+      { name: 'Javascript', sub: ['Vue.js', 'React', 'Angular2']},
+      { name: 'Database', sub: ['MySQL', 'PostgreSQL', 'MariaDB']},
+      { name: 'Javascript', sub: ['Operating System', 'Linux', 'Windows']}
+    ]
+  }
+})
+</script>
+
+
+<script id="jsbin-source-css" type="text/css">[v-cloak]{
+  display:none;
+}</script>
+
+<script id="jsbin-source-javascript" type="text/javascript">new Vue({
+  el: '#app',
+  data: {
+    password: '',
+    categories: [
+      { name: 'Javascript', sub: ['Vue.js', 'React', 'Angular2']},
+      { name: 'Database', sub: ['MySQL', 'PostgreSQL', 'MariaDB']},
+      { name: 'Javascript', sub: ['Operating System', 'Linux', 'Windows']}
+    ]
+  }
+})
+</script></body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  
+<style id="jsbin-css">
+[v-cloak]{
+  display:none;
+}
+</style>
+</head>
+<body>
+
+  <div id="app">
+    
+    ex 1
+    <input type="text" v-model="message">
+    Output : {{message}}
+    <br><br>
+    
+    ex 2
+    <input type="text" v-model.lazy='message2' v-on:ctrl.enter="">
+    Output : {{message2}}
+    <br><br>
+    
+    ex 3
+    <form action="" method="GET">
+      <input type="submit" value="Submit" @click.prevent="">
+    </form>
+  <br><br>
+  
+  </div>
+  
+  
+<script id="jsbin-javascript">
+new Vue({
+  el: '#app',
+  data: {
+    message: '',
+    message2: '',
+  },
+  methods: {
+     
+    
+  },
+})
+</script>
+
+
+<script id="jsbin-source-css" type="text/css">[v-cloak]{
+  display:none;
+}</script>
+
+<script id="jsbin-source-javascript" type="text/javascript">  
+new Vue({
+  el: '#app',
+  data: {
+    message: '',
+    message2: '',
+  },
+  methods: {
+     
+    
+  },
+})</script></body>
+</html>
